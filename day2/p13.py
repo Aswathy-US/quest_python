@@ -1,3 +1,4 @@
+#program to count the number of odd digits
 input_number = int(input('Enter a number to count the number of odd digits in it: '))
 count_of_odd_digits = 0
 temp_number = abs(input_number)

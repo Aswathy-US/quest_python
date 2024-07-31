@@ -1,5 +1,4 @@
-
-
+#program to count the number of digits
 input_number = int(input('Enter a number to count number of digits in it: '))
 
 
