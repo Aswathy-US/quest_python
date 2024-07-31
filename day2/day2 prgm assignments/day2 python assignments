@@ -1,0 +1,45 @@
+
+
+1. **What is an alternative to function overloading in Python?**
+
+   Python does not support traditional function overloading as seen in some other languages. Instead, you can use default parameters, variable-length argument lists, or keyword arguments to handle different scenarios within a single function.
+
+2. **Why is there no implicit type casting in Python?**
+
+   Python avoids implicit type casting to prevent unexpected behavior and ensure that type conversions are done explicitly. This design choice helps maintain clarity and control over how different data types are handled.
+
+3. **Why are there no `++` and `--` (increment/decrement) operators in Python?**
+
+   Python does not include `++` and `--` operators to keep the language clean and avoid ambiguity. Increment and decrement operations are performed using `+= 1` and `-= 1`, which are clearer and more explicit.
+
+4. **What is the difference between `@staticmethod` and `@classmethod` in Python?**
+
+   - `@staticmethod`: Defines a method that does not access or modify the instance or class. It operates independently and does not receive any implicit first argument like `self` or `cls`. It is used for utility functions that don't need access to class or instance data.
+
+   - `@classmethod`: Defines a method that can access and modify the class state. It takes `cls` as its first argument, which represents the class itself, allowing access to class-level attributes and methods.
+
+5. **What is the difference between `__new__()` and `__init__()` in Python?**
+
+   - `__new__()`: This method is responsible for creating and returning a new instance of a class. It is called before `__init__()` and is used to control the creation process of the instance.
+
+   - `__init__()`: This method initializes the newly created instance. It is called after `__new__()` and sets up the initial state of the object.
+
+6. **What is the syntax for using switch-case in Python? Provide an example.**
+
+   Python does not have a built-in `switch-case` statement. Instead, you can use a dictionary to mimic switch-case functionality. For example:
+
+   ```python
+   def switch_case(value):
+       switch = {
+           1: 'One',
+           2: 'Two',
+           3: 'Three'
+       }
+       return switch.get(value, 'Default')
+
+   print(switch_case(2))  # Output: Two
+   ```
+
+7. **Can a key in a dictionary be a composite value like a list or tuple, or should it be an atomic value such as a number or string?**
+
+   Dictionary keys in Python must be immutable and hashable. Thus, while lists cannot be used as keys, tuples can be used if they contain only immutable elements.
